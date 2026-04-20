@@ -26,6 +26,7 @@ def home():
     <p><b>Container:</b> {socket.gethostname()}</p>
     <p><b>Version:</b> {os.environ.get('APP_VERSION', '1.0.0')}</p>
     <p><b>Deployed by:</b> GitHub Actions CI/CD ✅</p>
+    <p><b>Pipeline:</b> Test → Build → Push ECR → Deploy ECS</p>
     <p><a href='/users'>View Users</a></p>
     <p><a href='/health'>Health Check</a></p>
     """
