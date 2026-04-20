@@ -4,6 +4,11 @@ FROM python:3.11-slim
 # Set working directory
 WORKDIR /app
 
+# Install curl for ECS health checks
+RUN apt-get update && \
+    apt-get install -y curl && \
+    rm -rf /var/lib/apt/lists/*
+
 # Install dependencies first (cached layer)
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
