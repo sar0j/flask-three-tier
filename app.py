@@ -22,9 +22,10 @@ def get_db():
 @app.route("/")
 def home():
     return f"""
-    <h1>Flask App - Docker + ECS</h1>
+    <h1>Flask App - Three Tier Architecture</h1>
     <p><b>Container:</b> {socket.gethostname()}</p>
-    <p><b>Version:</b> {os.environ.get('APP_VERSION', '2.0.0')}</p>
+    <p><b>Version:</b> {os.environ.get('APP_VERSION', '1.0.0')}</p>
+    <p><b>Deployed by:</b> GitHub Actions CI/CD ✅</p>
     <p><a href='/users'>View Users</a></p>
     <p><a href='/health'>Health Check</a></p>
     """
